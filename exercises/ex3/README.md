@@ -83,6 +83,8 @@ The Url changes when switching from display mode  to edit mode, by either referr
 
 ![Travel - Google Chrome](images/img_007.png "Travel - Google Chrome")
 
+Furthermore, defining a semantic key additionally displays the corresponding List Report table column values in bold, and for unsaved items, a **draft indicator** is shown.
+
 In order to get a stable Url that can be easily shared and which is also slightly better readable,\
 we will define property **TravelID** as the semantic key of entity **Travel**.
 
@@ -108,9 +110,13 @@ Switch to the preview browser tab and navigate from the list report to the objec
 
 ![Travel - Google Chrome](images/img_010.png "Travel - Google Chrome")
 
+\(20\) Navigate back to the List Report.\
+Column *Travel** now shows values in bold, and the **draft indicator** is shown.\
+![Travel - Google Chrome](images/img_011.png "Travel - Google Chrome")
+
 ## Summary
 
 We have learned how to add **criticality coloring to table lines**, how to define a **side effect** in order to have dependent data immediately refreshed during editing,
-and how to make usage of the **semantic key** annotation in order to get a better readable Url.
+and how to make usage of the **semantic key** annotation in order to get a better readable Url and to highlight the corresponding table column values in the List Report.
 
 Continue to - [Exercise 4 - Extending the App with Fiori Elements Building Blocks](../ex4/README.md)
