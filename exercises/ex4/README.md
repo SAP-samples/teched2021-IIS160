@@ -1,6 +1,6 @@
 # Exercise 4 - Flexible Programming Model: Extending the App with Fiori Elements Building Blocks
 
-In this exercise, we will replace the object page table section **Bookings** with a **custom section** by using the **SAP Fiori Tools Page Map**.\
+In this exercise, we will replace the object page table section **Bookings** with a **custom section** by using the **SAP Fiori tools Page Map**.\
 In the custom section, we will combine **freestyle UI5 controls** with **SAP Fiori elements building blocks** offered by the **flexible programming model**.
 
 ## Flexible Programming Model Overview
@@ -20,16 +20,16 @@ showing how to properly use building blocks in SAP Fiori elements extension poin
 
 ## Exercise 4.1 Remove existing Section via Page Map
 
-The **SAP Fiori Tools Page Map** provides several ways of configuring the app and also allows to add and remove UI elements.\
-\(1\) In the SAP Business Application Studio, click the corresponding tile on the **Application Info** tab in order to open the SAP Fiori Tools Page Map.\
+The **SAP Fiori tools Page Map** provides several ways of configuring the app and also allows to add and remove UI elements.\
+\(1\) In the SAP Business Application Studio, click the corresponding tile on the **Application Info** tab in order to open the SAP Fiori tools Page Map.\
 If closed, you can reopen the Application Info tab via menu **View->Find Command...->Fiori: Open Application Info**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_0.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-Alternatively, we can open the SAP Fiori Tools Page Map via context menu on the folder **app** in the **Explorer** pane\
+Alternatively, we can open the SAP Fiori tools Page Map via context menu on the folder **app** in the **Explorer** pane\
 or via menu **View -> Find Command... -> Fiori: Show Page Map**
 
-\(2\) On the SAP Fiori Tools Page Map tile **Object Page**, click icon ![icon](images/fieldicon00.png) (**Configure Page**).
+\(2\) On the SAP Fiori tools Page Map tile **Object Page**, click icon ![icon](images/fieldicon00.png) (**Configure Page**).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_000.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
@@ -204,7 +204,7 @@ Switch to the preview browser tab of the app.
 
 ## Summary
 
-You've now successfully added a **custom section** via the **SAP Fiori Tools Page Map**, and used the **table building block** in the extension.\
+You've now successfully added a **custom section** via the **SAP Fiori tools Page Map**, and used the **table building block** in the extension.\
 You have tested the building block's **editing and navigation behaviour**, and defined a **side effect** showing that editing data in the table influences data shown in other areas of the app.
 
 Continue to - [Exercise 5 - Adding a Micro Chart to the Table Building Block](../ex5/README.md)

@@ -150,10 +150,9 @@ Make yourself familiar with the application:
 - Click on **Edit** on the object page to create a **draft version** of the displayed object and to set the UI to edit mode.
 - Change the value of an input field to automatically **update the draft** when input field focus is changed, or when you navigate back to the List Report.
 - The draft is saved back to the active instance by pressing **Save** on the bottom of the Object Page.
-- In edit mode, the List Report shows a **draft indicator** in the corresponding line item.
 
 ## Summary
 
 You've now successfully generated and tested the Fiori elements app.
 
-Continue to - [Exercise 2 - Configuring the UI by Using the SAP Fiori Tools Page Map](../ex2/README.md)
+Continue to - [Exercise 2 - Configuring the UI by Using the SAP Fiori tools Page Map](../ex2/README.md)

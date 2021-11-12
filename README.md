@@ -11,7 +11,7 @@ The use of SAP Fiori elements with OData V4 and SAP Cloud Application Programmin
 improve the efficiency of developing SAP Fiori apps.\
 In this session you will get hands-on experience developing a standard list report or object page app\
 using SAP Fiori elements, and then extend it using the flexible programming model.\
-Learn how to use the new features provided with SAP Fiori Tools to simplify how you add annotations\
+Learn how to use the new features provided with SAP Fiori tools to simplify how you add annotations\
 and to personalize the appearance of your app.
 
 ## Requirements
@@ -34,7 +34,7 @@ There are no special requirements to follow the exercises in this repository.
   - [Exercise 1.2 Adding an App Preview Script](/exercises/ex1#exercise-12-adding-an-app-preview-script)
   - [Exercise 1.3 Starting the App](/exercises/ex1#exercise-13-starting-the-app)
 
-- [Exercise 2 Enhancing the UI by Using the SAP Fiori Tools Page Map](exercises/ex2#exercise-2-enhancing-the-ui-by-using-the-sap-fiori-tools-page-map)
+- [Exercise 2 Enhancing the UI by Using the SAP Fiori tools Page Map](exercises/ex2#exercise-2-enhancing-the-ui-by-using-the-sap-fiori-tools-page-map)
   - [Exercise 2.1 Enable Data Load During Start of the App](exercises/ex2#exercise-21-enable-data-load-during-start-of-the-app)
   - [Exercise 2.2 Change Sequence of a Table Column in the List Report](exercises/ex2#exercise-22-change-sequence-of-a-table-column-in-the-list-report)
   - [Exercise 2.3 Adding Criticality to a Table Column](exercises/ex2#exercise-23-adding-criticality-to-a-table-column)

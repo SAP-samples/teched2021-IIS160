@@ -1,6 +1,6 @@
-# Exercise 2 Enhancing the UI by Using the SAP Fiori Tools Page Map
+# Exercise 2 Enhancing the UI by Using the SAP Fiori tools Page Map
 
-In this exercise, you will learn how to use some of the new configuration features provided by the **SAP Fiori Tools Page Map**.
+In this exercise, you will learn how to use some of the new configuration features provided by the **SAP Fiori tools Page Map**.
 ## Exercise 2.1 Enable Data Load During Start of the App
 
 When starting the app, per default the user has to press the
@@ -78,8 +78,8 @@ We will now configure the **display text** and the **text arrangement** in order
 An additional property **Text Arrangement** is now shown in the properties pane.\
 \(15\) Expand the drop-down box.
 
-\(16\) Select list entry  **Text First**.\
-With it, column **Agency** will now show values in format **<display text\> (<identifier\>)**.
+\(16\) Make sure that list entry  **Text First** is selected.\
+With it, column **Agency** will show values in format **<display text\> (<identifier\>)**.
 
 ![tools - SAP Business Application Studio - Google Chrome](images/img_006.png "tools - SAP Business Application Studio - Google Chrome")
 
@@ -94,7 +94,7 @@ Switch to the preview browser tab.
 ## Exercise 2.5 Change Form Field Order and Display Type
 
 On the object page, in field group **Travel** we want to exchange the positioning of fields **Customer** and **Agency**.\
-For Field **Description**, in order to have long descriptions properly displayed in edit mode, we will switch the field's display type by using the SAP Fiori Tools Page Map.
+For Field **Description**, in order to have long descriptions properly displayed in edit mode, we will switch the field's display type by using the SAP Fiori tools Page Map.
 
 ![tools - SAP Business Application Studio - Google Chrome](images/TextArea.png "tools - SAP Business Application Studio - Google Chrome")
 
@@ -136,9 +136,9 @@ Click button ![image](images/fieldicon30.png) in order to switch back to display
 ## Exercise 2.6 Adding a new Field Group
 
 For a **sustainability initiative**, the travel service has been extended to provide some additional fields for the new green flight offering which are not yet shown in the UI.\
-In this exercise, we will add a new **subsection Sustainability** to section **Travel** of the object page by using the **Add Form Section** functionality of the **SAP Fiori Tools Page Map**.
+In this exercise, we will add a new **subsection Sustainability** to section **Travel** of the object page by using the **Add Form Section** functionality of the **SAP Fiori tools Page Map**.
 
-\(27\) In the SAP Fiori Tools Page Map's **page editor** for the object page,
+\(27\) In the SAP Fiori tools Page Map's **page editor** for the object page,
 expand **Page Layout - Sections - Travel - Subsections** and click icon **Add Sections** ![icon](images/fieldicon20.png).
 
 ![tools - SAP Business Application Studio - Google Chrome](images/img_014.png "tools - SAP Business Application Studio - Google Chrome")
