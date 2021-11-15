@@ -144,7 +144,11 @@ annotate TravelService.Booking with @UI : {
 
   $value : [
     { Value : to_Carrier.AirlinePicURL,  ![@UI.Importance] : #High},
-    {        Value : BookingID, ![@UI.Importance] : #High },
+    {
+        $Type : 'UI.DataField',
+        Value : BookingID,
+        ![@UI.Importance] : #High
+    },
   //  Exercise 5: add chart table column
 
     { Value : to_Customer_CustomerID, ![@UI.Importance] : #High },
