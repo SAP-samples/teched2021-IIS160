@@ -2,17 +2,22 @@ using TravelService from '../srv/travel-service';
 using from '../db/schema';
 using from './capabilities';
 
-//
-// annotatios that control the fiori layout
-//
-
+/*
+ UI annotations defining the app layout
+*/
 annotate TravelService.Travel with @UI : {
-
+/* 
+  Identification annotation defines actions shown in the object page header
+ */
   Identification : [
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.acceptTravel',   Label  : '{i18n>AcceptTravel}'   },
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.rejectTravel',   Label  : '{i18n>RejectTravel}'   },
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.deductDiscount', Label  : '{i18n>DeductDiscount}' }
   ],
+  /* 
+  HeaderInfo TypeName defines the subtitle on object page header
+  TypeNamePlural defines the List Report table header
+ */
   HeaderInfo : {
     TypeName       : '{i18n>Travel}',
     TypeNamePlural : '{i18n>Travels}',
@@ -25,6 +30,9 @@ annotate TravelService.Travel with @UI : {
       Value : '{i18n>TravelID}'
     }
   },
+  /* 
+  PresentationVariant defines a default sort order considered for List Report selection
+ */
   PresentationVariant : {
     Text           : 'Default',
     Visualizations : ['@UI.LineItem'],
@@ -34,12 +42,19 @@ annotate TravelService.Travel with @UI : {
       Descending : true
     }]
   },
+  /* 
+  SelectionFields define the filters shown in the List Report filter bar
+ */
   SelectionFields : [
     TravelID,
     to_Agency_AgencyID,
     to_Customer_CustomerID,
     TravelStatus_code
   ],
+  /* 
+  LineItem annotation define the table columns 
+  DataFieldForAction defines actions shown in the table toolbar
+ */
   LineItem : [
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.acceptTravel',   Label  : '{i18n>AcceptTravel}'   },
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.rejectTravel',   Label  : '{i18n>RejectTravel}'   },
@@ -54,6 +69,10 @@ annotate TravelService.Travel with @UI : {
     { Value : TravelStatus_code      },    
     { Value : Description            }
   ],
+  /*
+  Facets define the layout of the form field groups on the object page
+  Collection Facets group together reference facets, each representing a form field group
+  */
   Facets : [{
     $Type  : 'UI.CollectionFacet',
     Label  : '{i18n>Travel}',
@@ -78,15 +97,15 @@ annotate TravelService.Travel with @UI : {
         Label  : '{i18n>Dates}'
       }
     ]
-  }, {  // booking list
+      }, {  // booking list
       $Type  : 'UI.ReferenceFacet',
       Target : 'to_Booking/@UI.LineItem',
       Label  : '{i18n>Booking}'
-    }
+  }
   ],
   FieldGroup#GeneralData : { Data : [
     { Value : to_Customer_CustomerID },    
-    { Value : to_Agency_AgencyID     },
+    { Value : to_Agency_AgencyID     },  
     {
       $Type       : 'UI.DataField',
       Value       : TravelStatus_code,
@@ -125,15 +144,11 @@ annotate TravelService.Booking with @UI : {
   },
   SelectionFields : [],
   LineItem                : {
-  //Exercise 3.1: Add Table Line Criticality
-  
+  //Exercise 3.1 Add Table Line Criticality
+
   $value : [
     { Value : to_Carrier.AirlinePicURL,  ![@UI.Importance] : #High},
-    {
-        $Type : 'UI.DataField',
-        Value : BookingID,
-        ![@UI.Importance] : #High
-    },
+    {        Value : BookingID, ![@UI.Importance] : #High },
   //  Exercise 5: add chart table column
 
     { Value : to_Customer_CustomerID, ![@UI.Importance] : #High },

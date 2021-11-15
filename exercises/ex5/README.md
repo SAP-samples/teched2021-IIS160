@@ -14,7 +14,7 @@ The data required for the micro chart are already provided in the service model 
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_0.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-The properties are annotated with **@Core.Computed**, which means that the values are calculated in a read handler implementation for entity **Booking**\
+The properties are annotated with **@Core.Computed**, which means that the values are calculated in a read handler implementation for entity **Booking**
 in file **srv/travel-service.js** (3), section **Exercise 5: Data for Bookings table micro chart** (4).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_000.png "mydevspace - SAP Business Application Studio - Google Chrome")
