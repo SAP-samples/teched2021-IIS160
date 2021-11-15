@@ -47,7 +47,7 @@ In the wizard step **Datasource and Service Selection**, click \(6\).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_007.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(10\) Click ![icon](images/fieldicon05.png) to open the OData service drop-down.
+\(10\) Click ![icon](images/fieldicon05.png) to open the **OData service** drop-down.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_008.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
