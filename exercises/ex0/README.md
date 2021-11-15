@@ -2,8 +2,8 @@
 
 Welcome to the workshop **Accelerate the Development of SAP Fiori Apps Using SAP Fiori Elements**.\
 This workshop will guide you step-by-step through the process of creating a **Fiori elements floorplans for OData V4** app.\
-Based on a **SAP Cloud Application Programming Model** service equipped with basic UI annotations, you will learn how to generate and enhance a\
-**List Report Object Page**  Fiori elements application with the help of **SAP Fiori tools** and the **Flexible Programming Model**.
+Based on a **SAP Cloud Application Programming Model** service equipped with basic UI annotations, you will learn how to generate and enhance a 
+**List Report/Object Page**  Fiori elements application with the help of **SAP Fiori tools** and the **SAP Fiori Elements Flexible Programming Model**.
 
 ## Setting up Business Application Studio in an SAP Business Transformation Platform Trial Account
 
