@@ -116,7 +116,6 @@ Column *Travel** now shows values in bold, and the **draft indicator** is shown.
 
 ## Summary
 
-We have learned how to add **criticality coloring to table lines**, how to define a **side effect** in order to have dependent data immediately refreshed during editing,
-and how to make usage of the **semantic key** annotation in order to get a better readable Url and to highlight the corresponding table column values in the List Report.
+We have learned about **criticality coloring in table lines**, how to define a **side effect** in order to have dependent data immediately refreshed during editing, and the advantages of using a **semantic key** annotation.
 
 Continue to - [Exercise 4 - Extending the App with Fiori Elements Building Blocks](../ex4/README.md)
