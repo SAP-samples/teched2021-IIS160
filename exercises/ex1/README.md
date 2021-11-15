@@ -35,11 +35,11 @@ In the wizard step **Datasource and Service Selection**, click \(6\).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_004.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(7\) Select  ![image](images/fieldicon02.png).
+\(7\) Select **Use a Local CAP Project**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_005.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(8\) Click the **Browse for folder** icon to select your projects folder.
+\(8\) Click the **Browse for folder** icon to select the **CAP project folder path**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_006.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
