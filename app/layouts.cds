@@ -2,9 +2,6 @@ using TravelService from '../srv/travel-service';
 using from '../db/schema';
 using from './capabilities';
 
-/*
- UI annotations defining the app layout
-*/
 annotate TravelService.Travel with @UI : {
 /* 
   Identification annotation defines actions shown in the object page header
@@ -52,8 +49,7 @@ annotate TravelService.Travel with @UI : {
     TravelStatus_code
   ],
   /* 
-  LineItem annotation define the table columns 
-  DataFieldForAction defines actions shown in the table toolbar
+  LineItem annotation define the table columns. DataFieldForAction defines actions shown in the table toolbar
  */
   LineItem : [
     { $Type  : 'UI.DataFieldForAction', Action : 'TravelService.acceptTravel',   Label  : '{i18n>AcceptTravel}'   },
@@ -97,15 +93,15 @@ annotate TravelService.Travel with @UI : {
         Label  : '{i18n>Dates}'
       }
     ]
-      }, {  // booking list
+  }, {  // booking list
       $Type  : 'UI.ReferenceFacet',
       Target : 'to_Booking/@UI.LineItem',
       Label  : '{i18n>Booking}'
-  }
+    }
   ],
   FieldGroup#GeneralData : { Data : [
     { Value : to_Customer_CustomerID },    
-    { Value : to_Agency_AgencyID     },  
+    { Value : to_Agency_AgencyID     },
     {
       $Type       : 'UI.DataField',
       Value       : TravelStatus_code,
