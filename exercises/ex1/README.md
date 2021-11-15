@@ -121,6 +121,9 @@ Enter the following script:
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_017.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
 Please note the additional parameter **sap-ui-xx-viewCache=false** added to the app start Url.
+
+If a popup appears asking for project migration, please decline with **Don't ask again**
+(a fix for this is in the making).
 ## Exercise 1.3 Starting the App
 
 After completing these steps you will have started and tested the generated app.
