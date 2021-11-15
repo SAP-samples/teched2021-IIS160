@@ -8,7 +8,7 @@ In exercise 2.6 we have added an additional **subsection Sustainability** to the
 By adding a **criticality** annotation to the bookings table, we can **highlight the table lines** when the Trees-4-Tickets checkbox is selected.
 
 \(1\) Open file **app/layouts.cds** and scroll to section **Exercise 3.1: Add Table Line Criticality**\
-\(2\) Enter the following code snippet:
+\(2\) Create an empty line below and enter the following code snippet:
 
 ```js
     ![@UI.Criticality]: criticality,

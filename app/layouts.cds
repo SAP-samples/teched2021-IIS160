@@ -125,7 +125,7 @@ annotate TravelService.Booking with @UI : {
   },
   SelectionFields : [],
   LineItem                : {
-  //Exercise 3.1 Add Table Line Criticality
+  //Exercise 3.1: Add Table Line Criticality
   
   $value : [
     { Value : to_Carrier.AirlinePicURL,  ![@UI.Importance] : #High},

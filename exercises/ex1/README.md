@@ -60,7 +60,7 @@ In the wizard step **Datasource and Service Selection**, click \(6\).
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_010.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
 \(13\) In the wizard step **Entity Selection**, open drop-down **Main Entity**, and select **Travel**.\
-The properties of this entity will be used for display of data on List Report, showing data from the entity collection.
+The data of the main entity is shown in the list report and the first object page.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_011.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
