@@ -142,6 +142,14 @@ This opens a drop-down at the top offering all **cds run** and **cds watch** bas
 
 ![Manage Travels - Google Chrome](images/img_019.png "Manage Travels - Google Chrome")
 
+If the preview doesn't get opened in a new tab, check if the pop-ub blocker of your browser prevented that. Make sure you enable pop-ups
+for SAP Business Application Studio.
+![Manage Travels - Google Chrome](images/img_021.png "Manage Travels - Google Chrome")
+
+After that you can do a Ctrl+Click (Windows)/Cmd+Click (Mac) on the **http://localhost:4004** URL in the terminal to open the preview.
+![Manage Travels - Google Chrome](images/img_022.png "Manage Travels - Google Chrome")
+
+
 \(25\) On the List Report page of the Fiori application, click ![icon](images/fieldicon16.png) to trigger selection.
 
 ![Manage Travels - Google Chrome](images/img_020.png "Manage Travels - Google Chrome")
