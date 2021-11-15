@@ -98,7 +98,7 @@ In the **Explorer** pane on the left side of SAP Business Application Studio, yo
 
 With the setup procedure done, you now have completed:
 
-- setting up the SAP Cloud Platform trial account
+- Setting up the SAP Cloud Platform trial account
 - Access to SAP Business Application Studio
 - Creation of your development space
 - Setting up the sample OData V4 service in SAP Business Application Studio
