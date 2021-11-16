@@ -115,15 +115,14 @@ In **exercises 4 ff.**, we will extend the app based on **xml fragments**. We ne
 Enter the following script:
 
 ```js
-    "watch-managetravels": "cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
+    "watch-managetravels": "PORT=4004 cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
 ```
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_017.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
 Please note the additional parameter **sap-ui-xx-viewCache=false** added to the app start Url.
 
-If a popup appears asking for project migration, please decline with **Don't ask again**
-(a fix for this is in the making).
+If a popup appears asking for project migration, please decline with **Don't ask again** (a fix for this is in the making).
 ## Exercise 1.3 Starting the App
 
 After completing these steps you will have started and tested the generated app.
@@ -138,19 +137,31 @@ Alternatively, you can select **Preview Application** via the context menu of th
 
 This opens a drop-down at the top offering all **cds run** and **cds watch** based scripts maintained in the scripts section of file **package.json**.
 
-\(24\) Select the start script **watch-managetravels** we have added to the package.json. This runs the service and automatically starts the Fiori application.
+\(24\) Select the start script **watch-managetravels** we have added to the package.json.
 
 ![Manage Travels - Google Chrome](images/img_019.png "Manage Travels - Google Chrome")
 
-If the preview doesn't get opened in a new tab, check if the pop-ub blocker of your browser prevented that. Make sure you enable pop-ups
-for SAP Business Application Studio.
+This runs the service in an Application Modeler terminal session and automatically starts the Fiori application.
+
+![Manage Travels - Google Chrome](images/img_0191.png "Manage Travels - Google Chrome")
+
+- If the preview doesn't get opened in a new tab, check if the pop-ub blocker of your browser prevented that.\
+Make sure you enable pop-ups
+for SAP Business Application Studio, then restart with **Preview Application** as described above.
 
 ![Manage Travels - Google Chrome](images/img_021.png "Manage Travels - Google Chrome")
 
-After that you can do a Ctrl+Click (Windows)/Cmd+Click (Mac) on the **http://localhost:4004** URL in the terminal to open the preview.
+**Please note that there are currently some minor issues with app preview with a fix in the making:**
 
-![Manage Travels - Google Chrome](images/img_022.png "Manage Travels - Google Chrome")
+- App preview sometimes stops with an error in the Application Modeler terminal pane.\
+In that case, close the terminal pane and restart with **Preview Application** as described above
+- Restarting app preview sometimes leads to an error due to a blocked preview port.\
+In that case, just increase the port in the npm script you have added,
+for example change **PORT=4004** to **PORT=4005**, then restart app preview
 
+```js
+    "watch-managetravels": "PORT=4005 cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
+```
 
 \(25\) On the List Report page of the Fiori application, click ![icon](images/fieldicon16.png) to trigger selection.
 
@@ -160,7 +171,7 @@ Make yourself familiar with the application:
 
 - on the List Report, use the **selection fields** to set a filter
 - Click on a list item to **navigate** to the object page
-- Click on **Edit** on the object page to create a **draft version** of the displayed object and to set the UI to edit mode.
+- Click on **Edit** on the object page to create a **draft version** of the displayed object and to set the UI to edit mode.\
   (Please note that travels with status **Accepted** will only allow editing of field **Description**)
 - Change the value of an input field to automatically **update the draft** when input field focus is changed, or when you navigate back to the List Report.
 - The draft is saved back to the active instance by pressing **Save** on the bottom of the Object Page.
