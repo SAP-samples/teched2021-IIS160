@@ -27,7 +27,6 @@ There are no special requirements to follow the exercises in this repository.
     - [Accessing SAP Business Application Studio](exercises/ex0#accessing-sap-business-application-studio)
   - [Creating the Development Space](exercises/ex0#creating-the-development-space)
   - [Getting the Sample Scenario](exercises/ex0#getting-the-sample-scenario)
-  - [Reopening the Exposed Port](exercises/ex0#reopen-the-exposed-port)
   
 - [Exercise 1 - Generating an SAP Fiori Elements App](/exercises/ex1#exercise-1---generating-an-sap-fiori-elements-app)
   - [Exercise 1.1 Using the SAP Fiori tools Application Generator](/exercises/ex1#exercise-11-using-the-sap-fiori-tools-application-generator)
