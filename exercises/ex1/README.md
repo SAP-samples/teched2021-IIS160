@@ -161,6 +161,7 @@ Make yourself familiar with the application:
 - on the List Report, use the **selection fields** to set a filter
 - Click on a list item to **navigate** to the object page
 - Click on **Edit** on the object page to create a **draft version** of the displayed object and to set the UI to edit mode.
+  (Please note that travels with status **Accepted** will only allow editing of field **Description**)
 - Change the value of an input field to automatically **update the draft** when input field focus is changed, or when you navigate back to the List Report.
 - The draft is saved back to the active instance by pressing **Save** on the bottom of the Object Page.
 
