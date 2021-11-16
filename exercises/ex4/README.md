@@ -68,7 +68,7 @@ This will generate an **i18n text key** in order to make the entered text transl
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_007.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(9\) Enter as Fragment Name: **Custom Section**\
+\(9\) Enter as Fragment Name: **CustomSection**\
 (fragment name has to **match exactly** for some of the subsequent exercises to work properly)
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_008.png "mydevspace - SAP Business Application Studio - Google Chrome")
