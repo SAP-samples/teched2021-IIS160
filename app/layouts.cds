@@ -205,4 +205,3 @@ annotate TravelService.BookingSupplement with @UI : {
 
 
 // Exercise 6: BookedFlights entity Chart annotation
-
