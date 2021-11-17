@@ -125,7 +125,7 @@ This is done in a custom read handler implementation in file **srv/travel-servic
 
 We will now add the **chart building block** to the custom section's **XML fragment**.
 
-\(9\) Open file **app/managetravels/webapp/ext/CustomSection.fragment.xml**.
+\(9\) Open file **app/managetravels/webapp/ext/fragment/CustomSection.fragment.xml**.
 
 In the UI, the chart shall be shown next to the table in the same container, sharing the space mutually.
 
