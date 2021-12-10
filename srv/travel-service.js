@@ -91,7 +91,7 @@ init() {
   this.after ('PATCH', 'BookingSupplement', async (_,req) => { if ('Price' in req.data) {
     // We need to fetch the Travel's UUID for the given Supplement target
     const { travel } = await SELECT.one `to_Travel_TravelUUID as travel` .from (Booking.drafts)
-      .where `BookingUUID = ${ SELECT.one `to_Booking_BookingUUID` .from (BookingSupplement.drafts, req.data.BookSupplUUID) }`
+      .where `BookingUUID = ${ SELECT.one `to_Booking_BookingUUID` .from (BookingSupplement.drafts).where({BookSupplUUID:req.data.BookSupplUUID}) }`
       // .where `BookingUUID = ${ SELECT.one `to_Booking_BookingUUID` .from (req._target) }`
       //> REVISIT: req._target not supported for subselects -> see tests
     return this._update_totals4 (travel)
@@ -101,15 +101,12 @@ init() {
   /**
    * Helper to re-calculate a Travel's TotalPrice from BookingFees, FlightPrices and Supplement Prices.
    */
-  this._update_totals4 = async function (travel) {
-    const [{ BookingFee }, { FlightPrices }, { SupplPrices }] = await cds.read ([
-      SELECT.one `BookingFee` .from (Travel.drafts,travel),
-      SELECT.one `sum(FlightPrice) as FlightPrices` .from (Booking.drafts) .where ({ to_Travel_TravelUUID: travel }),
-      SELECT.one `sum(Price) as SupplPrices` .from (BookingSupplement.drafts) .where ({ to_Booking_BookingUUID: /* in: */
-        SELECT `BookingUUID` .from (Booking.drafts) .where ({ to_Travel_TravelUUID: travel })
-      })
-    ])
-    return UPDATE (Travel.drafts,travel) .with ({ TotalPrice: BookingFee + FlightPrices + SupplPrices })
+  this._update_totals4 = function (travel) {
+    return UPDATE (Travel.drafts, travel) .with ({ TotalPrice: CXL `coalesce (BookingFee, 0) + ${
+      SELECT `coalesce (sum (FlightPrice + ${
+        SELECT `coalesce (sum (Price),0)` .from (BookingSupplement.drafts) .where `to_Booking_BookingUUID = BookingUUID`
+      }),0)` .from (Booking.drafts) .where `to_Travel_TravelUUID = TravelUUID`
+    }` })
   }
 
     /**
@@ -261,7 +258,13 @@ init() {
     /**
      * Trees-for-Tickets: Set criticality
      */
-    this.after("READ", "Booking", setCriticality);  
+
+    this.after("READ", "Booking", (results, req) => { 
+      if (results.length > 0 && "BookingUUID" in results[0]){
+        setCriticality(results)
+      };  
+    });
+
 
     /**
      * Exercise 5: Data for Bookings table micro chart
@@ -270,18 +273,13 @@ init() {
       return await cds
       .tx(context)
       .read([
-        SELECT.from(
-          Booking,
-          [`to_Carrier_AirlineID as AirlineID`],
-          [`count(BookingUUID) as BookedFlights`]
+        SELECT`to_Carrier_AirlineID as AirlineID, count(BookingUUID) as BookedFlights`.from(
+          Booking
         ).groupBy`to_Customer_CustomerID, to_Carrier_AirlineID`.having({
           to_Customer_CustomerID: each.to_Customer_CustomerID,
         }),
-        SELECT.from(Airline, 
-          [`AirlineID`],
-          [`Name`]
-        )
-      ])       
+        SELECT`AirlineID, Name`.from(Airline),
+      ]);      
     };
 
     const _readBookedFlightsSingleAirline = async (bookedFlights, context) => {
