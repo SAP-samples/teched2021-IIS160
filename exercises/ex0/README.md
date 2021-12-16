@@ -5,7 +5,7 @@ This workshop will guide you step-by-step through the process of creating a **Fi
 Based on a **SAP Cloud Application Programming Model** service equipped with basic UI annotations, you will learn how to generate and enhance a 
 **List Report/Object Page**  Fiori elements application with the help of **SAP Fiori tools** and the **SAP Fiori Elements Flexible Programming Model**.
 
-## Setting up Business Application Studio in an SAP Business Transformation Platform Trial Account
+## Setting up Business Application Studio in an SAP BTP Trial Account
 
 If you don't have an **SAP BTP account** already, you can create your own [here](https://www.sap.com/products/cloud-platform/get-started.html).
 
@@ -98,7 +98,7 @@ In the **Explorer** pane on the left side of SAP Business Application Studio, yo
 
 With the setup procedure done, you now have completed:
 
-- Setting up the SAP Cloud Platform trial account
+- Setting up the SAP BTP trial account
 - Access to SAP Business Application Studio
 - Creation of your development space
 - Setting up the sample OData V4 service in SAP Business Application Studio

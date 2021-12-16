@@ -21,7 +21,7 @@ There are no special requirements to follow the exercises in this repository.
 ## Exercises
 
 - [Getting Started - Setting up your Development Environment](exercises/ex0#getting-started---setting-up-your-development-environment)
-  - [Setting up SAP Business Application Studio in an SAP Cloud Platform Trial Account](exercises/ex0#setting-up-business-application-studio-in-an-sap-business-transformation-platform-trial-account)
+  - [Setting up SAP Business Application Studio in an SAP BTP Trial Account](exercises/ex0#setting-up-business-application-studio-in-an-sap-business-transformation-platform-trial-account)
     - [New Trial Users](exercises/ex0#new-trial-users)
     - [Existing Trial Users](exercises/ex0#existing-trial-users)
     - [Accessing SAP Business Application Studio](exercises/ex0#accessing-sap-business-application-studio)
