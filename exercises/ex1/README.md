@@ -118,7 +118,7 @@ In **exercises 4 ff.**, we will extend the app based on **xml fragments**. We ne
 Enter the following script:
 
 ```js
-    "watch-managetravels": "cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
+    "watch-managetravels": "PORT=4004 cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
 ```
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_017.png "mydevspace - SAP Business Application Studio - Google Chrome")
