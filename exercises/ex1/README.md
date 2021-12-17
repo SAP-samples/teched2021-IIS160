@@ -69,6 +69,9 @@ This will add an additional routing target allowing navigation from the object p
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_012.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
+Set the option **Automatically add table columns** to **No**.\
+![mydevspace - SAP Business Application Studio - Google Chrome](images/img_0121.png "mydevspace - SAP Business Application Studio - Google Chrome")
+
 \(15\) Click ![icon](images/fieldicon10.png).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_013.png "mydevspace - SAP Business Application Studio - Google Chrome")
@@ -84,19 +87,19 @@ In the wizard step **Project Attributes**, add the following attributes to the a
 - **Application Namespace**: sap.fe.cap\
 (namespace has to match exactly for some of the subsequent exercises to work properly)
 
+- **Minimum SAPUI5 version**: Stick to the latest version available (preselected).
+
 \(16\) Select **Yes** in order to configure advanced options.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_014.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(17\) Click to open the drop-down **UI5 version**.
+\(17\) Click to open the drop-down **UI5 theme**.
 
-\(18\) Select version **1.96.0**.
-Please note: in order to have some of the subsequent exercises working properly, don't choose **Latest** as UI5 version since it might still point to a version below 1.96.0 during TechEd2021.
-
+\(18\) Select **SAP Horizon (experimental)**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_015.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(19\) Select **Yes** in order to skip generation of an additional associated annotation.cds file.
+\(19\) Select **Yes** in order to skip generation of an additional associated annotation.cds file.\
 The sample service already provides a basic set of UI annotations with file app/layouts.cds.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_016.png "mydevspace - SAP Business Application Studio - Google Chrome")
@@ -115,7 +118,7 @@ In **exercises 4 ff.**, we will extend the app based on **xml fragments**. We ne
 Enter the following script:
 
 ```js
-    "watch-managetravels": "PORT=4004 cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
+    "watch-managetravels": "cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4" 
 ```
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_017.png "mydevspace - SAP Business Application Studio - Google Chrome")
