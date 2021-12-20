@@ -99,6 +99,9 @@ In the wizard step **Project Attributes**, add the following attributes to the a
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_015.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
+Please note that the screenshots in the subsequent exercises show the UI with the SAP Quartz theme.\
+The SAP Horizon theme was published after the creation of the exercises.
+
 \(19\) Select **Yes** in order to skip generation of an additional associated annotation.cds file.\
 The sample service already provides a basic set of UI annotations with file app/layouts.cds.
 
