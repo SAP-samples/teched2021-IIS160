@@ -259,9 +259,9 @@ init() {
      * Trees-for-Tickets: Set criticality
      */
 
-    this.after("READ", "Booking", (results, req) => { 
+     this.after("READ", "Booking", async (results, req) => { 
       if (results.length > 0 && "BookingUUID" in results[0]){
-        setCriticality(results)
+        await setCriticality(results)
       };  
     });
 
