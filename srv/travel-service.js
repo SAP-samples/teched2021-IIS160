@@ -178,7 +178,7 @@ init() {
    */
    this._update_totalsGreen = async function (req) {
     const [{ TotalPrice }] = await cds.read([
-      SELECT.one`TotalPrice`.from(Travel.drafts, req.data.TravelUUID)
+      SELECT.one`TotalPrice, GreenFee`.from(Travel.drafts, req.data.TravelUUID)
     ]);
     if (req.data.GoGreen) {
       req.info({
@@ -195,7 +195,11 @@ init() {
   `);
     } else {
       this._update_totals4(req.data.TravelUUID);
-      return UPDATE(Travel.drafts, req.data.TravelUUID).with({ GreenFee: 0, TreesPlanted: 0 });
+      return UPDATE(Travel.drafts, req.data.TravelUUID).with(`
+      TotalPrice = TotalPrice - GreenFee,
+      GreenFee = 0,
+      TreesPlanted = 0
+    `);
     }
   };
 

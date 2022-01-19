@@ -175,7 +175,8 @@ We need to move it to the **app folder** in order to make usage of it.
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_005.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
 Now we need to define the **click event handler** for the chart,  and add the Popover fragment as a dependent control to the Custom Sections grid control.\
-\(14\) Add the following xml snippet as an additional property of **macros:Chart** as shown in the screenshot below.
+\(14\) Open file **app/managetravels/webapp/ext/fragment/CustomSection.fragment.xml**\
+and add the following xml snippet as an additional property of **macros:Chart** as shown in the screenshot below.
 
 ```js
   selectionChange="handler.onChartSelectionChanged"

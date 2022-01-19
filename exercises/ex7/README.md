@@ -16,10 +16,10 @@ Drag and drop file **Trees4Tickets.fragment.xml** \(1\) to folder **app/managetr
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_0.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
 The XML fragment defines a dialog containing some UI5 controls and two buttons for saving and canceling.\
-The most interesting part is the **form element building block** used in \(3\) and \(4\).\
+The most interesting part is the **form element building block** used in \(3\) and \(4\).
 
 - with property **metaPath** pointing to a property of the current binding context, we can show the property as a form field, having the same behaviour as a standard field.
-- property **visible** shows and hides the form elements depending on the path value. We are using boolean property **GoGreen** for that purpose, which is set when the checkbox is selected 
+- property **visible** shows and hides the form elements depending on the path value. We are using boolean property **GoGreen** for that purpose, which is set when the checkbox is selected.
 
 
 For the **controller extension**, we will now move the corresponding controller file to the app's sub folder:

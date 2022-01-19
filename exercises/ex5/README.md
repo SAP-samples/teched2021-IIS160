@@ -26,7 +26,7 @@ In order to add a micro chart to a table, you have to define an annotation of ty
 The data point needs to be referenced in the **measure attributes** of annotation **@UI.Chart**.\
 Chart type **#Donut** displays a **radial chart**. Properties **Measures** and **MeasureAttributes** are mandatory.
 
-\(5\) Open file **app/layout.cds**.
+\(5\) Open file **app/layouts.cds**.
 
 Scroll down to section **Exercise 5: Booking entity Chart annotation** and add the following code snippet:
 
