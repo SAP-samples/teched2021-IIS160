@@ -28,7 +28,7 @@
 				selectionChange="handler.onChartSelectionChanged"					
 			>
 			</macros:Chart>			
-			<macros:Table metaPath='to_Booking@com.sap.vocabularies.UI.v1.LineItem'
+			<macros:Table metaPath='to_Booking/@com.sap.vocabularies.UI.v1.LineItem'
 						id='bookingTable'/>			
 			</l:content>
 		</l:Grid>

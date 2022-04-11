@@ -113,7 +113,7 @@ we define where the custom section should be located on the Object Page.
   <l:Grid hSpacing='1' containerQuery='true'
     defaultSpan='L12 M12 S12'>
    <l:content>
-   <macros:Table metaPath='to_Booking@com.sap.vocabularies.UI.v1.LineItem'
+   <macros:Table metaPath='to_Booking/@com.sap.vocabularies.UI.v1.LineItem'
       id='bookingTable'/>
    </l:content>
   </l:Grid>
