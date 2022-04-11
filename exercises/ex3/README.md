@@ -83,10 +83,8 @@ The Url changes when switching from display mode  to edit mode, by either referr
 
 ![Travel - Google Chrome](images/img_007.png "Travel - Google Chrome")
 
+In order to get a stable Url that can be easily shared and which is also slightly better readable, we will define property **TravelID** as the semantic key of entity **Travel**.\
 Furthermore, defining a semantic key additionally displays the corresponding List Report table column values in bold, and for unsaved items, a **draft indicator** is shown.
-
-In order to get a stable Url that can be easily shared and which is also slightly better readable,\
-we will define property **TravelID** as the semantic key of entity **Travel**.
 
 Open file **app/Capabilities.cds** (15) and scroll to section **Exercise 3.2: Add Semantic key**.
 

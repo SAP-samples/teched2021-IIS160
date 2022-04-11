@@ -137,7 +137,7 @@ Instead of using **cds watch** in the terminal in order to start the service, we
 If **cds watch** is already running in a terminal, please end it by pressing keyboard keys **control+c**, otherwise the default port 4004 will already be in use by the existing server process.
 
 \(23\) Click **Preview Application** on tab **Application information** that is automatically displayed after app generation.\
-If the tab is closed, you can open it again via menu command **View->Find Command...->Fiori: Open Application Info**.\
+If the tab is closed, you can open it again via menu command **View->Find Command...->Fiori: Open Application Info**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_018.png "mydevspace - SAP Business Application Studio - Google Chrome")
 

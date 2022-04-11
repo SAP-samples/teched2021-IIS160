@@ -83,9 +83,11 @@ we define where the custom section should be located on the Object Page.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_010.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-\(12\) Click  button ![icon](images/fieldicon08.png).
+\(12\) Set **Generate Event Handler (Controller)** to **true**. 
+![mydevspace - SAP Business Application Studio - Google Chrome](images/img_010a.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
-![mydevspace - SAP Business Application Studio - Google Chrome](images/img_011.png "mydevspace - SAP Business Application Studio - Google Chrome")
+Click  button ![icon](images/fieldicon08.png).
+
 
 ## Exercise 4.3 Replace Generated XML Fragment Content
 
@@ -125,7 +127,8 @@ we define where the custom section should be located on the Object Page.
 Only two properties are defined:
 
 - the table control's **identifier**
-- **metaPath** defining the relative path from the current page's context (entity **Travel**) to the **@UI.LineItem** annotation of the associated entity **Booking**.
+- **metaPath** defining the relative path from the current page's context (entity **Travel**) to the **LineItem** annotation of the\
+   associated entity **Booking** (via association **'to_Booking/@com.sap.vocabularies.UI.v1.LineItem'**).
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_014.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
@@ -173,8 +176,9 @@ In exercise 4.4, we tested the building block's editing behaviour by changing th
 As selecting another flight number automatically updates the corresponding flight price, the expectation would be that\
 field **Total Price** shown in the field group **Prices** is updated when the draft is saved.
 
-In order to achieve this, let us add a **side effect** to the booking table's column **Flight Number**.\
-In the service entity **Booking**, the corresponding property is named **ConnectionID**.
+In order to achieve this, let us add a **side effect** to the service entity **Travel** association **to_booking**.\
+This ensures that a GET request with a select on property **TotalPrice** is issued immediately after any property belonging\
+to the path defined in side effect property *SourceEntities** was changed.
 
 Open file **app/field-control.cds** (23) and scroll to section **Exercise 4.5: Add side effect on ConnectionID** (24)
 
@@ -183,15 +187,14 @@ Open file **app/field-control.cds** (23) and scroll to section **Exercise 4.5: A
 Insert the following snippet:
 
 ```js
-annotate TravelService.Booking with 
-@Common : {SideEffects #ConnectionID: {
+annotate TravelService.Travel with 
+@Common : {SideEffects #Bookings: {
   $Type            : 'Common.SideEffectsType',
-  SourceProperties : [ConnectionID],
-  TargetProperties : ['to_Travel/TotalPrice']
+  SourceEntities : [to_Booking],
+  TargetProperties : ['TotalPrice']
 }};
 ```
 
-Please note for the annotation's property **TargetProperties**, property **TotalPrice** of the parent entity is targeted via association **to_Travel**.\
 Switch to the preview browser tab of the app.
 
 (25) Repeat **exercise steps (15) to (17)** in order to select a different Flight Number.
