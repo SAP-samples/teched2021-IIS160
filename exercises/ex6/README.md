@@ -112,7 +112,8 @@ annotate TravelService.BookedFlights with @(
 );
 ```
 
-The aggregated property **CountFlights** is defined as the **measure*, properties **to_Customer_Customer_ID** and **AirlineID** are defined as the **grouping dimensions**.
+The aggregated property **CountFlights** is defined as the **measure**.\
+Properties **to_Customer_Customer_ID** and **AirlineID** are defined as the **grouping dimensions**.
 
 ![mydevspace - SAP Business Application Studio - Google Chrome](images/img_001.png "mydevspace - SAP Business Application Studio - Google Chrome")
 
