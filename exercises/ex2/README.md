@@ -163,7 +163,7 @@ expand **Page Layout - Sections - Travel - Subsections** and click icon **Add Se
 ![tools - SAP Business Application Studio - Google Chrome](images/img_018.png "tools - SAP Business Application Studio - Google Chrome")
 
 
-\(32\) Expand the form of the the new subsection **Sustainability** and click icon **Add Fields** ![](images/fieldicon26.png) \(33\).
+\(32\) Expand the form of the the new subsection **Sustainability** and click icon **Add Fields** ![](images/fieldicon26.png) \(33\) and choose **Add Basic Fields**\(33.a\) from the menu.
 
 ![tools - SAP Business Application Studio - Google Chrome](images/img_019.png "tools - SAP Business Application Studio - Google Chrome")
 

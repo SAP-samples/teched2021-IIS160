@@ -56,7 +56,7 @@ In the preview browser tab of the app, verify that the object page booking table
 
 In the dialog **Add Custom Section**, enter  the following information:
 
-- Id: **CustomSection**
+- Fragment Name: **CustomSection**
 - Title: **My Itinerary**
   
 \(7\) On the right end of the **Title** input field, click icon ![icon](images/fieldicon05.png).
