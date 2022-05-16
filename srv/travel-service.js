@@ -124,7 +124,7 @@ init() {
       if (BeginDate > EndDate)
         req.error(
           400,
-          `Begin Date ${BeginDate} must be befroe End Date ${EndDate}.`,
+          `Begin Date ${BeginDate} must be before End Date ${EndDate}.`,
           "in/BeginDate"
         );
     });
@@ -264,7 +264,7 @@ init() {
      */
 
      this.after("READ", "Booking", (results, req) => { 
-      if (results.length > 0 && "BookingUUID" in results[0]){
+      if (results && results.length > 0 && "BookingUUID" in results[0]){
         return setCriticality(results)
       };  
     });

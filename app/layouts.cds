@@ -20,11 +20,11 @@ annotate TravelService.Travel with @UI : {
     TypeNamePlural : '{i18n>Travels}',
     Title          : {
       $Type : 'UI.DataField',
-      Value : TravelID
+      Value : Description
     },
     Description    : {
       $Type : 'UI.DataField',
-      Value : '{i18n>TravelID}'
+      Value : TravelID
     }
   },
   /* 
@@ -69,56 +69,59 @@ annotate TravelService.Travel with @UI : {
   Facets define the layout of the form field groups on the object page
   Collection Facets group together reference facets, each representing a form field group
   */
+
   Facets : [{
     $Type  : 'UI.CollectionFacet',
-    Label  : '{i18n>Travel}',
+    Label  : '{i18n>GeneralInformation}',
     ID     : 'Travel',
     Facets : [
-      {  // general data
+      {  // travel details
         $Type  : 'UI.ReferenceFacet',
-        ID     : 'GeneralData',
-        Target : '@UI.FieldGroup#GeneralData',
-        Label  : '{i18n>Travel}'
+        ID     : 'TravelData',
+        Target : '@UI.FieldGroup#TravelData',
+        Label  : '{i18n>GeneralInformation}'
       },
-      {  // price data
+      {  // price information
         $Type  : 'UI.ReferenceFacet',
-        ID     : 'Prices',
-        Target : '@UI.FieldGroup#Prices',
+        ID     : 'PriceData',
+        Target : '@UI.FieldGroup#PriceData',
         Label  : '{i18n>Prices}'
       },
-      {  // dates
+      {  // date information
         $Type  : 'UI.ReferenceFacet',
-        ID     : 'Dates',
-        Target : '@UI.FieldGroup#Dates',
+        ID     : 'DateData',
+        Target : '@UI.FieldGroup#DateData',
         Label  : '{i18n>Dates}'
-      }
-    ]
+      }   
+      ]
   }, {  // booking list
-      $Type  : 'UI.ReferenceFacet',
-      Target : 'to_Booking/@UI.LineItem',
-      Label  : '{i18n>Booking}'
-    }
-  ],
-  FieldGroup#GeneralData : { Data : [
-    { Value : to_Customer_CustomerID },    
+    $Type  : 'UI.ReferenceFacet',
+    Target : 'to_Booking/@UI.PresentationVariant',
+    Label  : '{i18n>Bookings}'
+  }],
+
+  FieldGroup#TravelData : { Data : [
+    { Value : TravelID               },
     { Value : to_Agency_AgencyID     },
+    { Value : to_Customer_CustomerID },
+    { Value : Description            },
     {
       $Type       : 'UI.DataField',
       Value       : TravelStatus_code,
       Criticality : TravelStatus.criticality,
       Label : '{i18n>Status}' // label only necessary if differs from title of element
-    },
-    { Value : Description            }
+    }
   ]},
-  FieldGroup#Prices : { Data : [
-    { Value : BookingFee             },
-    { Value : TotalPrice             }
+  FieldGroup #DateData : {Data : [
+    { $Type : 'UI.DataField', Value : BeginDate },
+    { $Type : 'UI.DataField', Value : EndDate }
   ]},
-  FieldGroup#Dates : { Data : [
-    { Value : BeginDate              },
-    { Value : EndDate                }
+  FieldGroup #PriceData : {Data : [
+    { $Type : 'UI.DataField', Value : BookingFee },
+    { $Type : 'UI.DataField', Value : TotalPrice }
   ]}
 };
+
 annotate TravelService.Booking with @UI : {
   Identification : [
     { Value : BookingID },
@@ -126,11 +129,8 @@ annotate TravelService.Booking with @UI : {
   HeaderInfo : {
     TypeName       : '{i18n>Bookings}',
     TypeNamePlural : '{i18n>Bookings}',
-    Title          : { Value : BookingID },
-    Description    : {
-      $Type : 'UI.DataField',
-      Value : '{i18n>BookingID}'
-    }
+    Title          : { Value : to_Customer.LastName },
+    Description    : { Value : BookingID }
   },
   // Exercise 5: add chart header facet
 
@@ -160,28 +160,36 @@ annotate TravelService.Booking with @UI : {
   ]},
   Facets : [{
     $Type  : 'UI.CollectionFacet',
-    Label  : '{i18n>Booking}',
+    Label  : '{i18n>GeneralInformation}',
     ID     : 'Booking',
     Facets : [{  // booking details
       $Type  : 'UI.ReferenceFacet',
       ID     : 'BookingData',
-      Target : '@UI.FieldGroup#BookingData',
-      Label  : 'Booking'
+      Target : '@UI.FieldGroup#GeneralInformation',
+      Label  : '{i18n>Booking}'
+    }, {  // flight details
+      $Type  : 'UI.ReferenceFacet',
+      ID     : 'FlightData',
+      Target : '@UI.FieldGroup#Flight',
+      Label  : '{i18n>Flight}'
     }]
   }, {  // supplements list
     $Type  : 'UI.ReferenceFacet',
     Target : 'to_BookSupplement/@UI.LineItem',
-    Label  : '{i18n>BookingSupplement}'
+    Label  : '{i18n>BookingSupplements}'
   }],
-  FieldGroup #BookingData : { Data : [
+  FieldGroup #GeneralInformation : { Data : [
     { Value : BookingID              },
     { Value : BookingDate,           },
     { Value : to_Customer_CustomerID },
+    { Value : BookingDate,           },
+    { Value : BookingStatus_code     }
+  ]},
+  FieldGroup #Flight : { Data : [
     { Value : to_Carrier_AirlineID   },
     { Value : ConnectionID           },
     { Value : FlightDate             },
-    { Value : FlightPrice            },
-    { Value : BookingStatus_code     }
+    { Value : FlightPrice            }
   ]}
 };
 annotate TravelService.BookingSupplement with @UI : {
@@ -200,7 +208,6 @@ annotate TravelService.BookingSupplement with @UI : {
     { Value : Price,                      Label : '{i18n>ProductPrice}' }
   ],
 };
-
 // Exercise 5: Booking entity Chart annotation
 
 
