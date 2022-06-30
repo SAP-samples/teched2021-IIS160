@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2021-IIS160)](https://api.reuse.software/info/github.com/SAP-samples/teched2021-IIS160)
+
 # IIS160 - Accelerate the Development of SAP Fiori Apps Using SAP Fiori Elements
 
 ## Description
